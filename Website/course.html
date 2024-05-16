@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Title - Code Hub</title>
+    <link rel="stylesheet" href="course.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-title">Code Hub</div>
+    </nav>
+    
+    <div class="course-header">
+        <h1 id="course-title">Course Title</h1>
+        
+    </div>
+
+    <div class="course-content" id="course-videos">
+        <!-- Videos will be dynamically added here -->
+    </div>
+
+    <!-- Other course content like lectures, quizzes, etc. -->
+
+    <script>
+        // Fetch the course title from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const courseTitle = urlParams.get('title');
+
+        // Set the course title in the header
+        const courseTitleElement = document.getElementById('course-title');
+        courseTitleElement.textContent = courseTitle;
+
+        // Define video IDs or URLs corresponding to the course title
+        const videoURLs = {
+            "OOPs in Java": ["https://www.youtube.com/embed/VIDEO_ID_1", "https://www.youtube.com/embed/VIDEO_ID_2"],
+            "OOPs in C++": ["https://www.youtube.com/embed/VIDEO_ID_3", "https://www.youtube.com/embed/VIDEO_ID_4"],
+            // Add more course titles and corresponding video URLs as needed
+        };
+
+        // Get the corresponding videos for the course title
+        const courseVideos = videoURLs[courseTitle];
+
+        // Add video iframes to the course content
+        const courseVideosContainer = document.getElementById('course-videos');
+        courseVideos.forEach(videoURL => {
+            const iframe = document.createElement('iframe');
+            iframe.src = videoURL;
+            courseVideosContainer.appendChild(iframe);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,427 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #E3DBDB;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #BB3E3E;
+    color: #fff;
+    padding: 20px 20px;
+}
+
+.nav-title {
+    font-family: 'Luckiest Guy', sans-serif;
+    font-size: 44px;
+    color: #570606;
+}
+
+.nav-links button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #F2C1C1;
+    color: #570606;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.2s;
+    font-family: 'Mali', sans-serif; /* Mali font for buttons */
+    border-radius: 20px; /* Rounded corners for a stylish shape */
+    box-shadow: 2px 2px 4px
+}
+
+.nav-links button:hover {
+    background-color: #e6a1a1; /* Slightly darker on hover */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25); /* Slightly larger shadow on hover */
+}
+
+.hero-image img {
+    width: 100%;
+    height: 70vh;
+}
+
+
+
+.motivational-statement {
+    font-family: 'Mali', sans-serif; /* Using the Mali font */
+    font-style: italic; /* Making the text italic */
+    font-weight: 700; /* Mali's bold weight */
+    color: #BB3E3E; /* Setting the color */
+    text-align: center; /* Centering text horizontally */
+    font-size: 34px; /* Adjust font size as needed */
+    margin: 20px 0; /* Add some margin for spacing */
+    padding: 20px; /* Padding for better spacing */
+}
+
+.our-courses {
+    font-family: 'Nosifer', cursive; /* Applying the Nosifer font */
+    font-size: 52px; /* Adjust size as needed */
+    font-weight: bold; /* Bold for semantic clarity, though Nosifer is inherently bold */
+    color: #BB3E3E; /* Specified text color */
+    text-align: center; /* Centering text horizontally */
+    margin: 40px 0; /* Top and bottom margin for spacing */
+}
+
+.course-showcase {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 40px auto;
+    padding: 10px;
+    margin-left: 50px;
+    /* Adjust if needed */
+}
+
+.course-left, .course-right {
+    flex: 1;
+}
+
+.course-left h2 {
+    font-family: 'Mali', sans-serif;
+    color: #570606;
+    margin-left: 120px;
+    font-size: 30px;
+}
+
+.course-image {
+    width: 100%; /* Adjust based on actual image size and layout preference */
+    max-width: 70%; /* Keeps the image reasonably sized */
+    margin-top: 5px;
+}
+
+.enroll-button {
+    font-family: 'Mali', sans-serif;
+    background-color: #BB3E3E; 
+    color: white;
+    padding: 10px 20px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 10px; 
+    font-size: 18px; 
+    margin-top: 20px; /* Space above the button */
+    transition: background-color 0.3s ease; 
+    margin-left: 120px;
+}
+
+.enroll-button:hover {
+    background-color: #9e2a2b; /* Darker shade on hover for effect */
+}
+
+.course-right h3 {
+    font-family: 'Mali', sans-serif;
+    color: #570606;
+    text-align: left;
+    font-size: 30px;
+}
+
+.course-right ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.course-right ul li {
+    font-family: 'Mali', sans-serif;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.divider {
+    border: none;
+    height: 3px; /* Makes the line thicker */
+    background-color: #BB3E3E; /* Matches the navbar color or choose as per your design */
+    margin: 40px auto; /* Adds some space above and below the line */
+    width: 80%;
+}
+
+/* FAQ Section */
+.faq-section {
+   /* background-color: #f9f9f9;*/
+    padding: 20px;
+    margin: 20px 0;
+    font-family: 'Nosifer', cursive; /* Applying the Nosifer font */
+    font-size: 25px; /* Adjust size as needed */
+    font-weight: bold; /* Bold for semantic clarity, though Nosifer is inherently bold */
+    color: #BB3E3E; /* Specified text color */
+    text-align: center; /* Centering text horizontally */
+    margin: 40px 0;
+}
+
+.faq h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #BB3E3E;
+}
+
+.faq-question {
+    background-color: #e88888;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.faq-question:hover {
+    background-color: #a33d3d;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    margin-top: 5px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #BB3E3E;
+}
+
+.faq-question.active + .faq-answer {
+    display: block;
+}
+
+/* Additional Styling */
+.faq-question, .faq-answer p {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+
+@media screen and (max-width: 768px) {
+    .course-showcase {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-left, .course-right {
+        flex: none;
+        text-align: center;
+    }
+
+    .course-image {
+        margin: 20px auto; /* Center the image on smaller screens */
+        display: block;
+    }
+}
+
+.contact-section {
+    background-color: #BB3E3E; /* Theme color */
+    color: #fff; /* Text color */
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.contact-section h2 {
+    font-family: 'Nosifer', cursive; /* Applying the Nosifer font */
+    font-size: 36px; /* Adjust size as needed */
+    font-weight: bold; /* Bold for semantic clarity, though Nosifer is inherently bold */
+    text-align: center; /* Centering text horizontally */
+    margin-bottom: 20px;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-section textarea {
+    height: 150px;
+}
+
+.contact-section input[type="submit"] {
+    background-color: #F2C1C1; /* Button color */
+    
+    color: #570606; /* Text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Mali', sans-serif; /* Using the Mali font */
+    font-size: 16px;
+}
+
+.contact-section input[type="submit"]:hover {
+    background-color: #e6a1a1; /* Slightly darker on hover */
+}
+
+.social-icons {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 15px; /* Increased margin for better spacing */
+    color: #fff; /* Icon color */
+    font-size: 45px; /* Increase the font size */
+}
+
+.social-icons a:hover {
+    color: #F2C1C1; /* Hover color */
+}
+
+.modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Style for the form inside the modal */
+        .modal-content form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-content input[type="text"],
+        .modal-content input[type="email"] {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .modal-content input[type="submit"] {
+    background-color: #BB3E3E; /* Theme color */
+            
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-content input[type="submit"]:hover {
+    background-color: #BB3E3E; /* Theme color */
+    
+        }
+
+        /* Custom CSS for the success message */
+.success-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 9999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
+}
+
+.success-message .close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    color: #888;
+}
+
+.success-message h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.success-message p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.success-message img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.success-message button {
+    background-color: hsl(0, 39%, 49%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.success-message button:hover {
+    background-color: hsl(0, 39%, 49%);
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-links button {
+        margin-top: 5px;
+    }
+
+    .social-icons {
+        margin-top: 20px; /* Adjusted for smaller screen */
+    }
+
+    .social-icons a {
+        font-size: 270px; /* Adjusted font size for smaller screen */
+    }
+}
