@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Hub - Login & Signup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mali:wght@400;600;700&italic&family=Nosifer&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-title">Code Hub</div>
+        <div class="nav-links">
+            <button onclick="showModal('login')">Login</button>
+            <button onclick="showModal('signup')">Signup</button>
+        </div>
+    </nav>
+
+    <div class="animated-text">
+        <h1><span class="fade-in zoom-in rotate">Upskill Yourself
+            Bridge 'The Skills Gaps'</span></h1>
+    </div>
+    <!-- Login Form -->
+    <div id="login" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Login</h2>
+            <form action="login.html" method="post">
+                <label for="loginEmail">Email</label><br>
+                <input type="email" id="loginEmail" name="loginEmail" required><br>
+    
+                <label for="loginPassword">Password</label><br>
+                <input type="password" id="loginPassword" name="loginPassword" required><br>
+    
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signup" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Signup</h2>
+            <form action="index.html" method="post">
+                <label for="signupName">Name</label><br>
+                <input type="text" id="signupName" name="signupName" required><br>
+    
+                <label for="signupEmail">Email</label><br>
+                <input type="email" id="signupEmail" name="signupEmail" required><br>
+    
+                <label for="signupPassword">Password</label><br>
+                <input type="password" id="signupPassword" name="signupPassword" required><br>
+    
+                <input type="submit" value="Signup">
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        var loginModal = document.getElementById("login");
+        var signupModal = document.getElementById("signup");
+
+        function showModal(modalId) {
+            if (modalId === 'login') {
+                loginModal.style.display = "block";
+            } else if (modalId === 'signup') {
+                signupModal.style.display = "block";
+            }
+        }
+
+        function closeModal() {
+            loginModal.style.display = "none";
+            signupModal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == loginModal || event.target == signupModal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

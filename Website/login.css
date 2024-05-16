@@ -1,0 +1,143 @@
+/* Your CSS styles here */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #E3DBDB;
+    background-image: url("log.png");
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensure the background image covers the entire background */
+    background-position: center; /* Center the background image */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #BB3E3E;
+    color: #fff;
+    padding: 20px 20px;
+}
+
+.nav-title {
+    font-family: 'Luckiest Guy', sans-serif;
+    font-size: 44px;
+    color: #570606;
+}
+
+.nav-links button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #F2C1C1;
+    color: #570606;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.2s;
+    font-family: 'Mali', sans-serif; /* Mali font for buttons */
+    border-radius: 20px; /* Rounded corners for a stylish shape */
+    box-shadow: 2px 2px 4px;
+}
+
+.nav-links button:hover {
+    background-color: #e6a1a1; /* Slightly darker on hover */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25); /* Slightly larger shadow on hover */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="password"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.modal-content input[type="submit"] {
+    background-color: #BB3E3E; /* Theme color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content input[type="submit"]:hover {
+    background-color: #9e2a2b; /* Darker shade on hover for effect */
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateAlternate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animated-text h1 {
+    margin-top: 210px;
+    font-size: 48px;
+    text-align: center;
+}
+
+.animated-text h1 span {
+    font-family: 'Luckiest Guy', sans-serif; /* Change font style */
+    color: #BB3E3E;
+    animation: fadeIn 1s ease, zoomIn 1s ease, rotate 5s linear infinite; /* Add rotate animation */
+}
+
