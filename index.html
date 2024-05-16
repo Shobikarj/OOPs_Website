@@ -25,7 +25,7 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <h2>Login</h2>
-            <form action="login.html">
+            <form id="loginForm">
                 <label for="loginEmail">Email</label><br>
                 <input type="email" id="loginEmail" name="loginEmail" required><br>
     
@@ -34,6 +34,7 @@
     
                 <input type="submit" value="Login">
             </form>
+            <p id="loginMessage"></p>
         </div>
     </div>
 
@@ -42,7 +43,7 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <h2>Signup</h2>
-            <form action="login.html">
+            <form id="signupForm">
                 <label for="signupName">Name</label><br>
                 <input type="text" id="signupName" name="signupName" required><br>
     
@@ -54,6 +55,7 @@
     
                 <input type="submit" value="Signup">
             </form>
+            <p id="signupMessage"></p>
         </div>
     </div>
 
@@ -80,6 +82,27 @@
                 closeModal();
             }
         }
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var email = document.getElementById('loginEmail').value;
+            var password = document.getElementById('loginPassword').value;
+            document.getElementById('loginMessage').innerText = `Login attempt with email: ${email}`;
+            setTimeout(function() {
+                window.location.href = 'login.html';
+            }, 1000); // Redirect after 1 second for demo purposes
+        });
+
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var name = document.getElementById('signupName').value;
+            var email = document.getElementById('signupEmail').value;
+            var password = document.getElementById('signupPassword').value;
+            document.getElementById('signupMessage').innerText = `Signup attempt with name: ${name}, email: ${email}`;
+            setTimeout(function() {
+                window.location.href = 'login.html';
+            }, 1000); // Redirect after 1 second for demo purposes
+        });
     </script>
 </body>
 </html>
