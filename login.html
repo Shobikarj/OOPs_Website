@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Hub - Learn OOP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mali:wght@400;600;700&italic&family=Nosifer&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-title">Code Hub</div>
+        <!-- <div class="nav-links">
+            <button onclick="location.href='#login'">Login</button>
+            <button onclick="location.href='#signup'">Signup</button>
+        </div> -->
+    </nav>
+    <div class="hero-image">
+        <img src="bck.png" alt="Coding Image">
+    </div>
+
+    <div class="motivational-statement">
+        Believe you can and you're halfway there.
+    </div>
+
+    <div class="our-courses">
+        Our Courses
+    </div>
+
+    <div class="course-showcase">
+        <div class="course-left">
+            <h2>OOPs in Java</h2>
+            <img src="OOPs java.png" alt="OOPs in Java" class="course-image"><br>
+            <button class="enroll-button" onclick="showModal('OOPs in Java')">Enroll Now</button>      
+        </div>
+        <div class="course-right">
+            <h3>Learning Objectives</h3>
+            <ul>
+                <li>Understand encapsulation, inheritance, and polymorphism in OOP.</li>
+                <li>Recognize syntax for defining classes, objects, and methods in Java.</li>
+                <li>Explain OOP advantages in software development and real-world applications.</li>
+                <li>Assess maintainability, extensibility, and reusability of OOP designs in Java.</li>
+                <li>Design and develop software systems using OOP principles in Java.</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="divider">
+    <div class="course-showcase">
+        <div class="course-left">
+            <h2>OOPs in C++</h2>
+            <img src="cplusplus.png" alt="OOPs in C++" class="course-image">
+            <button class="enroll-button" onclick="showModal('OOPs in C++')">Enroll Now</button>
+        </div>
+        <div class="course-right">
+            <h3>Learning Objectives</h3>
+            <ul>
+                <li>Understand encapsulation, inheritance, and polymorphism in OOP.</li>
+                <li>Recognize syntax for defining classes, objects, and methods in C++.</li>
+                <li>Explain OOP advantages in software development and real-world applications.</li>
+                <li>Assess maintainability, extensibility, and reusability of OOP designs in C++.</li>
+                <li>Design and develop software systems using OOP principles in C++.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+            <button class="faq-question">Do I need any prior programming experience?</button>
+            <div class="faq-answer">
+                <p>No, our courses are designed to accommodate beginners as well as experienced programmers. We start with the basics before moving to more advanced topics.</p>
+            </div>
+    
+            <button class="faq-question">What is the duration of each course?</button>
+            <div class="faq-answer">
+                <p>Each course duration varies but is typically between 4 to 12 weeks, depending on the complexity and scope of the topic.</p>
+            </div>
+    
+            <button class="faq-question">Can I access the courses on my mobile device?</button>
+            <div class="faq-answer">
+                <p>Yes, our platform is mobile-friendly, allowing you to learn on-the-go from your smartphone or tablet.</p>
+            </div>
+    
+            <!-- Add more FAQs here if needed -->
+        </div>
+    </div>
+    
+    <div class="contact-section">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+    
+            <input type="submit" value="Submit">
+        </form>
+    
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <!-- Your content here -->
+
+    <!-- Modal -->
+    <div id="enrollModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Enroll Now</h2>
+            <form action="#" method="post" onsubmit="enrollCourse(event)">
+                <label for="enrollName">Name</label><br>
+                <input type="text" id="enrollName" name="enrollName" required><br>
+    
+                <label for="enrollEmail">Email:</label><br>
+                <input type="email" id="enrollEmail" name="enrollEmail" required><br>
+    
+                <input type="hidden" id="courseTitle" name="courseTitle">
+                <input type="submit" value="Enroll">
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <div id="successMessage" class="success-message">
+        <span class="close" onclick="closeSuccessMessage()">&times;</span>
+
+        <h2>Congratulations!</h2>
+        <p>You have successfully enrolled for the course <span id="enrolledCourseTitle"></span></p>
+        <img src="congrats.png" alt="Enrolled Course Image">
+        <button onclick="goToCourse()">Go to Course</button>
+    </div>
+
+    <script src="faq.js"></script> 
+</body>
+</html>
